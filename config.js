@@ -1,7 +1,7 @@
 module.exports = {
-  websiteUrl: 'https://klinger.io',
-  analyticsTrackingId: 'G-3C1P7CZGS4',
-  firebaseDatabaseUrl: 'https://klinger-io-default-rtdb.firebaseio.com',
+  websiteUrl: 'https://joaoavf.com',
+  analyticsTrackingId: 'G-7671GQXQVH',
+  firebaseDatabaseUrl: 'https://joaoavf-com-default-rtdb.firebaseio.com/',
   responsiveImage: {
     extensionRegex: /\.(jpe?g|png|webp)$/i,
     imageSizes: [32, 64, 128, 256, 512, 768, 1024, 1536, 2048],
