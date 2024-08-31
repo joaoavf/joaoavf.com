@@ -47,69 +47,45 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
   return (
     <>
       <Head
-        title="Andreas Klinger"
-        description="I am a product/eng-guy good in two things: Making people believe I am good in anything at all and making stuff worth a tweet. On this website I share notes &amp; thoughts."
+        title="Joao Ferreira"
+        description="Building an easy way for people to access DeFi."
       />
 
       <div className="flex items-center space-x-4 md:space-x-5 lg:space-x-6">
         <Image
           className="w-8 h-8 rounded-full prevent-default md:w-10 lg:w-12 md:h-10 lg:h-12"
-          src="/images/andreas-klinger.jpg"
-          alt="Andreas Klinger"
+          src="/images/pfp.jpg"
+          alt="Joao Ferreira"
           sizes="(max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
         />
         <h1>Hey! ✌️</h1>
       </div>
 
-      <p className="mt-6 md:mt-8 lg:mt-10">My name is Andreas Klinger.</p>
+      <p className="mt-6 md:mt-8 lg:mt-10">My name is Joao Ferreira.</p>
       <p>
-        I was founding team &amp; CTO of{' '}
-        <a href="https://www.producthunt.com" target="_blank" rel="noreferrer">
-          Product Hunt
+        I am the founder and CEO of {' '}
+        <a href="https://www.usepicnic.com" target="_blank" rel="noreferrer">
+          Picnic
         </a>
-        , VPE of{' '}
-        <a href="https://www.coinlist.co" target="_blank" rel="noreferrer">
-          CoinList
-        </a>
-        , Head of Remote at{' '}
-        <a href="https://www.angellist.com" target="_blank" rel="noreferrer">
-          AngelList
-        </a>
-        , and CTO at <a href="https://www.beondeck.com">On Deck</a>.
-      </p>
+        . Prior to this I helped scale Uber Eats in Brazil.
+      </p>    
       <p>
-        I also angel invest via{' '}
-        <a
-          href="https://www.remotefirstcapital.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Remote First Capital
-        </a>
-        .
-      </p>
-
-      <p>
-        I was lucky to learn from <Link href="/posts/🙏">a lot of people</Link>{' '}
-        throughout my career.
-        <br />
-        On this page I try to{' '}
-        <Link href="/posts/">summarize some learnings</Link>.
+        On this website I am looking for a way to write more often.
       </p>
 
       <ul className="flex mt-6 space-x-8 prevent-default md:space-x-9 lg:space-x-10 md:mt-8 lg:mt-10">
         {[
           {
             Icon: TwitterColorIcon,
-            href: 'https://twitter.com/andreasklinger',
+            href: 'https://twitter.com/joaoavf',
           },
           {
             Icon: LinkedInColorIcon,
-            href: 'https://www.linkedin.com/in/andreasklinger',
+            href: 'https://www.linkedin.com/in/joaoavf',
           },
           {
             Icon: GitHubIcon,
-            href: 'https://github.com/andreasklinger',
+            href: 'https://github.com/joaoavf',
           },
         ].map(({ href, Icon }) => (
           <li key={href}>
