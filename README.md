@@ -1,4 +1,4 @@
-# Blog of JF
+# Blog of Joao Ferreira
 
 In this repository you will find the source code for [joaoavf.com](https://joaoavf.com/).
 
