@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   // Genearte RSS feed and add it to public directory
   generateRssFeed(
     {
-      title: 'Blog posts of Andreas Klinger',
+      title: 'Blog posts of JF',
       description:
         'Learn more about startups, remote work, funding, software and useful tools I use. In the blog posts I share my experience from the past 10+ years.',
     },

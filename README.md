@@ -1,6 +1,9 @@
-# Blog of Andreas Klinger
+# Blog of JF
 
-In this repository you will find the source code for [klinger.io](https://klinger.io/).
+In this repository you will find the source code for [joaoavf.com](https://joaoavf.com/).
+
+This is a fork from Andreas Klinger @ [klinger.io](https://klinger.io/).
+
 
 ## Techstack
 

@@ -114,7 +114,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               href="/"
               className="prevent-default max-w-[45%] p-3 -m-3 text-base sm:text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors whitespace-nowrap overflow-hidden text-ellipsis"
             >
-              Andreas Klinger
+              JF
             </Link>
 
             <div className="flex items-center space-x-3 text-gray-600 transition-colors sm:space-x-6 md:space-x-8 lg:space-x-10 dark:text-gray-400">
@@ -143,7 +143,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </main>
 
         <footer className="px-4 pb-6 space-y-2 text-gray-500 md:flex md:justify-between md:space-y-0 md:px-5 md:pb-4 lg:px-10 lg:pb-5">
-          <div>&copy; Copyright {new Date().getFullYear()} Andreas Klinger</div>
+          <div>&copy; Copyright {new Date().getFullYear()} JF</div>
           <div className="text-sm leading-loose md:text-base">
             <a
               className="space-x-1 prevent-default"

@@ -100,7 +100,7 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
 
   return (
     <>
-      <Head title={`${title} | Andreas Klinger`} description={summary} />
+      <Head title={`${title} | JF`} description={summary} />
 
       <article>
         <h1>{title}</h1>
