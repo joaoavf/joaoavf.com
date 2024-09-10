@@ -57,19 +57,16 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
           alt="Joao Ferreira"
           sizes="(max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
         />
-        <h1>Hey! ✌️</h1>
+        <h1>Welcome 🙏</h1>
       </div>
 
-      <p className="mt-6 md:mt-8 lg:mt-10">My name is Joao Ferreira.</p>
-      <p>
-        I am the founder and CEO of {' '}
+      <p className="mt-6 md:mt-8 lg:mt-10">I am Joao Ferreira. Currently I am building {' '}
         <a href="https://www.usepicnic.com" target="_blank" rel="noreferrer">
           Picnic
         </a>
-        . Prior to this I helped scale Uber Eats in Brazil.
-      </p>    
+        , which allows web2 users to access DeFi.</p>
       <p>
-        On this website I am looking for a way to write more often.
+        This is an experiment for me to write more often and get used into sharing my ideas.
       </p>
 
       <ul className="flex mt-6 space-x-8 prevent-default md:space-x-9 lg:space-x-10 md:mt-8 lg:mt-10">
