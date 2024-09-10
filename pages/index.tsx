@@ -66,6 +66,9 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
         </a>
         , which allows web2 users to access DeFi.</p>
       <p>
+        I understand reality via data and love to run experiments. My main interests are startups, blockchain, technology and network states.
+      </p>
+      <p>
         This is an experiment for me to write more often and get used into sharing my ideas.
       </p>
 
