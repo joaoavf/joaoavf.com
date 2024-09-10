@@ -103,7 +103,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
         <small>
           PS: If you find typos or got ideas how to improve articles, feel free
           to{' '}
-          <a href="https://github.com/andreasklinger/klinger-io">
+          <a href="https://github.com/joaoavf/joaoavf.com">
             send me a pull request
           </a>
         </small>

@@ -147,7 +147,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <div className="text-sm leading-loose md:text-base">
             <a
               className="space-x-1 prevent-default"
-              href="https://github.com/andreasklinger/klinger-io"
+              href="https://github.com/joaoavf/joaoavf.com"
               target="_blank"
               rel="noreferrer"
             >
