@@ -61,8 +61,8 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
       </div>
 
       <p className="mt-6 md:mt-8 lg:mt-10">I am João Ferreira. Currently I am building {' '}
-        <a href="https://www.usepicnic.com" target="_blank" rel="noreferrer">Picnic</a>, which 
-        <a href="https://www.youtube.com/watch?v=aKbsZkxeJNs" target="_blank" rel="noreferrer"> makes DeFi a lot easier to use</a>.</p>
+        <a href="https://www.usepicnic.com" target="_blank" rel="noreferrer">Picnic</a>, which  
+        <a href="https://www.youtube.com/watch?v=aKbsZkxeJNs" target="_blank" rel="noreferrer">makes DeFi a lot easier to use</a>.</p>
       <p>
         I understand reality via data and love to run experiments. My main interests are startups, blockchain, technology and network states.
       </p>
