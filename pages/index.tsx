@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   // Genearte RSS feed and add it to public directory
   generateRssFeed(
     {
-      title: 'Blog posts of Joao Ferreira',
+      title: 'Blog posts of João Ferreira',
       description:
         'Learn more about startups, remote work, funding, software and useful tools I use. In the blog posts I share my experience from the past 10+ years.',
     },
@@ -46,7 +46,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
   return (
     <>
       <Head
-        title="Joao Ferreira"
+        title="João Ferreira"
         description="Building an easy way for people to access DeFi."
       />
 
@@ -54,17 +54,15 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
         <Image
           className="w-8 h-8 rounded-full prevent-default md:w-10 lg:w-12 md:h-10 lg:h-12"
           src="/images/pfp.jpg"
-          alt="Joao Ferreira"
+          alt="João Ferreira"
           sizes="(max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
         />
         <h1>Welcome 🙏</h1>
       </div>
 
-      <p className="mt-6 md:mt-8 lg:mt-10">I am Joao Ferreira. Currently I am building {' '}
-        <a href="https://www.usepicnic.com" target="_blank" rel="noreferrer">
-          Picnic
-        </a>
-        , which allows web2 users to access DeFi.</p>
+      <p className="mt-6 md:mt-8 lg:mt-10">I am João Ferreira. Currently I am building {' '}
+        <a href="https://www.usepicnic.com" target="_blank" rel="noreferrer">Picnic</a>, which 
+        <a href="https://www.youtube.com/watch?v=aKbsZkxeJNs" target="_blank" rel="noreferrer">makes DeFi a lot easier to use</a>.</p>
       <p>
         I understand reality via data and love to run experiments. My main interests are startups, blockchain, technology and network states.
       </p>
