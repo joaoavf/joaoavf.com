@@ -57,14 +57,14 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
           alt="João Ferreira"
           sizes="(max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
         />
-        <h1>Welcome 🙏</h1>
+        <h1>Olá 🤘</h1>
       </div>
 
       <p className="mt-6 md:mt-8 lg:mt-10">I am João Ferreira. Currently I am building {' '}
-        <a href="https://www.usepicnic.com" target="_blank" rel="noreferrer">Picnic</a>, which  
+        <a href="https://www.usepicnic.com" target="_blank" rel="noreferrer">Picnic</a>, which {' '}  
         <a href="https://www.youtube.com/watch?v=aKbsZkxeJNs" target="_blank" rel="noreferrer">makes DeFi a lot easier to use</a>.</p>
       <p>
-        I understand reality via data and love to run experiments. My main interests are startups, blockchain, technology and network states.
+        I believe DeFi will become the financial rails of the world because it is more efficient. Less trust = less risk = less cost = higher yields.
       </p>
       <p>
         This is an experiment for me to write more often and get used into sharing my ideas.
