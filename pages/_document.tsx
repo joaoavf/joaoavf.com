@@ -31,6 +31,7 @@ class MyDocument extends Document {
             href="/favicon-32x32.png"
           />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/site.webmanifest" />
           <link
             rel="alternate"
             type="application/rss+xml"
