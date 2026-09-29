@@ -21,11 +21,11 @@ export const PostSeparator: FC<PostSeparatorProps> = ({
     // Display a separator if year of current post
     // is less than year of previous post
     if (currentYear < previousYear) {
-      const lineClassName = 'flex-1 h-0.5 rounded bg-gray-100 dark:bg-gray-800';
+      const lineClassName = 'flex-1 h-px bg-ink-200 dark:bg-ink-800';
       return (
-        <div className="flex items-center space-x-6" role="separator">
+        <div className="flex items-center pt-8 pb-2 space-x-6" role="separator">
           <div className={lineClassName} />
-          <div className="lg:text-lg text-gray-600 dark:text-gray-400">
+          <div className="font-serif text-lg text-ink-500 dark:text-ink-400">
             {currentYear}
           </div>
           <div className={lineClassName} />

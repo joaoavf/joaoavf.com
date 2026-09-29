@@ -51,8 +51,21 @@ class MyDocument extends Document {
               `,
             }}
           />
+          {/* Apply theme before first paint to avoid a flash of the wrong theme */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                try {
+                  var t = localStorage.getItem('theme');
+                  if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {}
+              `,
+            }}
+          />
         </Head>
-        <body className="bg-white dark:bg-black text-gray-700 dark:text-gray-300">
+        <body>
           <Main />
           <NextScript />
         </body>

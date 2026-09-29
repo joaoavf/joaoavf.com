@@ -1,100 +1,126 @@
+/* Base */
+html {
+  @apply antialiased;
+  text-rendering: optimizeLegibility;
+}
+body {
+  @apply bg-paper dark:bg-paper-dark text-ink-700 dark:text-ink-200;
+}
+::selection {
+  @apply bg-accent-bright/60 text-ink-900;
+}
+
 /* Typography */
 h1 {
-  @apply text-2xl md:text-3xl lg:text-4xl font-extrabold;
+  @apply font-serif text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] md:leading-[1.08] lg:leading-[1.05];
 }
 h2 {
-  @apply text-xl md:text-2xl lg:text-3xl;
+  @apply text-2xl md:text-3xl;
 }
 h3 {
-  @apply text-lg md:text-xl lg:text-2xl;
+  @apply text-xl md:text-2xl;
 }
 h4 {
-  @apply text-base md:text-lg lg:text-xl;
+  @apply text-lg md:text-xl;
 }
 :is(h1, h2, h3, h4) {
-  @apply text-gray-800 dark:text-gray-200 leading-normal md:leading-normal lg:leading-normal;
+  @apply text-ink-900 dark:text-ink-50;
 }
 :is(h2, h3, h4) {
-  @apply font-bold;
+  @apply font-serif font-semibold tracking-tight leading-snug;
 }
 p {
-  @apply text-lg lg:text-xl text-gray-600 dark:text-gray-400 leading-relaxed lg:leading-relaxed;
+  @apply text-lg md:text-xl text-ink-600 dark:text-ink-300 leading-relaxed md:leading-relaxed;
 }
 strong {
-  @apply text-gray-700 dark:text-gray-300 font-bold;
+  @apply text-ink-800 dark:text-ink-100 font-semibold;
+}
+small {
+  @apply text-base;
+}
+
+/* Long-form reading text */
+.prose :is(p, li) {
+  @apply font-serif text-[1.1875rem] md:text-[1.3125rem] leading-[1.7] md:leading-[1.7] text-ink-700 dark:text-ink-200;
 }
 
 /* Blockquotes */
 blockquote {
-  @apply pl-6 border-l-2 border-amber-500 lg:text-lg italic;
+  @apply pl-6 border-l-2 border-accent dark:border-accent-light italic;
 }
 
 /* Links */
 a:not(.prevent-default) {
-  @apply text-sky-600 dark:text-sky-400 font-semibold break-words;
+  @apply text-ink-900 dark:text-ink-50 font-medium break-words underline decoration-accent-bright dark:decoration-accent-light/60 decoration-[1.5px] underline-offset-[3px] transition-colors hover:text-accent dark:hover:text-accent-light hover:decoration-accent dark:hover:decoration-accent-light;
 }
 
 /* Media */
 :is(img, video, iframe):not(.prevent-default) {
-  @apply w-full rounded-md;
+  @apply w-full rounded-xl ring-1 ring-ink-900/10 dark:ring-white/10 shadow-sm;
 }
 
 /* Lists */
 ul:not(.prevent-default) {
-  @apply list-[square];
+  @apply list-disc marker:text-accent dark:marker:text-accent-light;
 }
 ol:not(.prevent-default) {
-  @apply list-decimal;
+  @apply list-decimal marker:text-ink-400;
 }
 :is(ul, ol):not(.prevent-default) {
   @apply ml-5;
 }
 :is(ul, ol):not(.prevent-default) li {
-  @apply pl-1 md:pl-2 text-lg lg:text-xl text-gray-600 dark:text-gray-400 leading-relaxed lg:leading-relaxed;
+  @apply pl-1 md:pl-2 text-lg md:text-xl text-ink-600 dark:text-ink-300 leading-relaxed md:leading-relaxed;
 }
 
 /* Code */
+:not(pre) > code {
+  @apply px-1.5 py-0.5 rounded-md bg-ink-100 dark:bg-ink-800 text-[0.875em] font-mono text-ink-800 dark:text-ink-100;
+}
 pre {
-  @apply w-full bg-slate-800 p-4 md:p-6 rounded-md text-sm md:text-base text-gray-300 break-all whitespace-normal;
+  @apply w-full bg-ink-900 dark:bg-ink-950 ring-1 ring-white/5 p-4 md:p-6 rounded-xl text-sm md:text-base text-ink-100 overflow-x-auto;
 }
 
 /* Horizontal rule */
 hr {
-  @apply border-t-2 border-t-gray-300 dark:border-t-gray-800;
+  @apply border-t border-t-ink-200 dark:border-t-ink-800;
 }
 
 /* Spacing */
 :is(main, article) > * + h2 {
-  @apply mt-12 md:mt-16 lg:mt-20;
+  @apply mt-14 md:mt-20;
 }
 :is(main, article) > * + :is(h3, h4) {
-  @apply mt-10 md:mt-12 lg:mt-14;
+  @apply mt-12 md:mt-14;
 }
 :is(main, article) > :is(h2, h3, h4) + :is(h2, h3, h4) {
-  @apply mt-8 md:mt-10 lg:mt-12;
+  @apply mt-8 md:mt-10;
 }
 :is(main, article) > :is(img, video, iframe):not(.prevent-default) {
-  @apply my-6 md:my-8 lg:my-10;
+  @apply my-8 md:my-10;
 }
 :is(main, article)
   > *
   + :is(p, blockquote, img, ul, ol, pre):not(.prevent-default) {
-  @apply mt-4 md:mt-6 lg:mt-8;
+  @apply mt-5 md:mt-6;
 }
 :is(main, article)
   > :is(ul, ol):not(.prevent-default)
   :is(li + li, li > :is(ul, ol)),
 :is(main, article) > blockquote > * + * {
-  @apply mt-2 md:mt-3 lg:mt-4;
+  @apply mt-2 md:mt-3;
 }
 :is(main, article) > * + hr,
 :is(main, article) > hr + *:not(h2, h3, h4) {
-  @apply mt-8 md:mt-10 lg:mt-12 !important;
+  @apply mt-10 md:mt-12 !important;
 }
 
 /* Other */
 * {
   -webkit-tap-highlight-color: transparent;
+}
+:focus-visible {
+  @apply outline outline-2 outline-offset-4 outline-accent dark:outline-accent-light rounded-sm;
 }
 svg {
   @apply h-full;

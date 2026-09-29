@@ -8,12 +8,12 @@ interface PostListProps {
   posts: PostFrontMatter[];
 }
 
-export const PostList: FC<PostListProps> = ({ className, posts }) => (
+export const PostList: FC<PostListProps> = ({ className = '', posts }) => (
   <ul
-    className={`prevent-default space-y-10 md:space-y-12 lg:space-y-14 ${className}`}
+    className={`prevent-default border-y divide-y border-ink-200 divide-ink-200 dark:border-ink-800 dark:divide-ink-800 ${className}`}
   >
     {posts.map((post, index) => (
-      <li key={post.slug} className="space-y-10 md:space-y-12 lg:space-y-14">
+      <li key={post.slug}>
         <PostSeparator
           currentPost={post}
           previousPost={posts[index - 1]}

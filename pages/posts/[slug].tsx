@@ -2,11 +2,13 @@ import { readFileSync, readdirSync } from 'fs';
 import { GetStaticProps, NextPage } from 'next';
 import { bundleMDX } from 'mdx-bundler';
 import { getMDXComponent } from 'mdx-bundler/client';
+import Link from 'next/link';
 import { join } from 'path';
 import { useEffect, useMemo } from 'react';
 import getReadingTime from 'reading-time';
 import { Head, PostImage } from '../../components';
 import { fetchDatabase } from '../../helpers/fetchDatabase';
+import { formatDate } from '../../helpers/formatDate';
 import { useViews } from '../../hooks';
 import { PostFrontMatter, Post } from '../../types';
 
@@ -83,12 +85,7 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
 
   // Create string for publication date
   const publishedAt = useMemo(
-    () =>
-      new Date(post.publishedAt).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-      }),
+    () => formatDate(post.publishedAt),
     [post.publishedAt]
   );
 
@@ -99,15 +96,39 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
   const BlogPost = useMemo(() => getMDXComponent(sourceCode), [sourceCode]);
 
   return (
-    <>
+    <div className="max-w-2xl mx-auto">
       <Head title={`${title} | João Ferreira`} description={summary} />
 
-      <article>
-        <h1>{title}</h1>
-        <p className="text-base lg:text-lg mt-4 md:mt-6 lg:mt-8 mb-12 md:mb-20 lg:mb-24">
-          {publishedAt} · {readingTime} · {views} views
-        </p>
+      <Link
+        href="/"
+        className="inline-flex items-center gap-2 text-sm font-medium transition-colors prevent-default group text-ink-500 dark:text-ink-400 hover:text-ink-900 dark:hover:text-ink-50"
+      >
+        <span
+          aria-hidden
+          className="transition-transform group-hover:-translate-x-1"
+        >
+          ←
+        </span>
+        All posts
+      </Link>
 
+      <header className="mt-8 mb-12 md:mt-10 md:mb-16 animate-fade-up">
+        <h1>{title}</h1>
+        {summary && (
+          <p className="mt-4 font-serif text-xl italic md:mt-6 md:text-2xl text-ink-500 dark:text-ink-400">
+            {summary}
+          </p>
+        )}
+        <div className="flex flex-wrap items-center pb-8 mt-6 text-sm border-b md:mt-8 gap-x-3 gap-y-1 border-ink-200 dark:border-ink-800 text-ink-500 dark:text-ink-400">
+          <time dateTime={post.publishedAt}>{publishedAt}</time>
+          <span aria-hidden>·</span>
+          <span>{readingTime}</span>
+          <span aria-hidden>·</span>
+          <span>{views} views</span>
+        </div>
+      </header>
+
+      <article className="prose">
         {/*
         Since the return type "null" was not added to the component types of
         "mdx-bundler", but it is included by default in the "FC" type of React,
@@ -115,7 +136,7 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
         */}
         <BlogPost components={{ Image: PostImage as any }} />
       </article>
-    </>
+    </div>
   );
 };
 
