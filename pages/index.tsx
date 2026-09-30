@@ -83,14 +83,12 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
             .
           </p>
           <p className="mt-5 text-lg md:mt-6 md:text-lg lg:text-xl">
-            I believe DeFi will become the financial rails of the world, simply
-            because it’s more efficient. Less trust = less risk = lower costs =
-            higher yields.
+            DeFi will become the financial rails of the world because it is more
+            efficient. Less trust = less risk = lower costs = higher yields.
           </p>
           <p className="mt-5 text-lg md:mt-6 md:text-lg lg:text-xl">
-            The headwinds are real, but the vision still needs people to build
-            it. And as technology becomes more exponential, trustless
-            institutions matter more than ever.
+            DeFi is early and still risky. It’s some of the hardest tech there
+            is to build. But when technology accelerates, DeFi will shine.
           </p>
 
           <ul className="flex flex-wrap gap-3 mt-8 prevent-default md:mt-10">
